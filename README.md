@@ -6,6 +6,9 @@ En ese momento, se comienza a capturar la traza del teléfono.
 
 Para detener se debe dar click en el mismo botón.
 
+Para el desarrollo del proyecto, se utilizo el plugin google_maps_flutter, el cual provee el widget del mapa.
+Se activo el sdk de los mapas desde la consola de google (https://console.cloud.google.com/)
+Para la lectura de las posiciones del teléfono, se utilizó el plugin GeoLocator() El cual se encarga de escuchar los cambios en las posiciones, de pintar cada una de las ubicaciones por donde va pasando el dispositivo.
 
 ## Getting Started
 
