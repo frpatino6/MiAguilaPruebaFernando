@@ -1,6 +1,12 @@
 # MiAguilaPruebaFernando
 Aplicacion movil que muestra la traza de un teléfono dependiendo su posición (Latitud Longitud)
 
+Para iniciar la traza, se debe dar click en el botón que se encuentra en la parte inferior derecha.
+En ese momento, se comienza a capturar la traza del teléfono.
+
+Para detener se debe dar click en el mismo botón.
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
