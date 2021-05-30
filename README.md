@@ -10,6 +10,8 @@ Para el desarrollo del proyecto, se utilizo el plugin google_maps_flutter, el cu
 Se activo el sdk de los mapas desde la consola de google (https://console.cloud.google.com/)
 Para la lectura de las posiciones del teléfono, se utilizó el plugin GeoLocator() El cual se encarga de escuchar los cambios en las posiciones, de pintar cada una de las ubicaciones por donde va pasando el dispositivo.
 
+Se agregó un controlador para el manejo del estado de la aplicación. Para esto se utilizó GETX.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
