@@ -1,25 +1,22 @@
+
 import 'package:flutter/material.dart';
 import 'package:miaguilatraking/widgets/traking/map-traking.dart';
 
-class TrakingPage extends StatefulWidget {
-  TrakingPage({Key? key}) : super(key: key);
+//Widget que contiente la página principal
+class TrackingPage extends StatelessWidget {
 
-  @override
-  _TrakingPageState createState() => _TrakingPageState();
-}
-
-class _TrakingPageState extends State<TrakingPage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Traking"),
+        title: Text("Traking "),
       ),
       body: _createBody(context),
     );
   }
 
   Widget _createBody(BuildContext context) {
+    // carga el widget que contiene el mapa y realiza el proceso de geolocalización
     return MapTracking();
   }
 }
+

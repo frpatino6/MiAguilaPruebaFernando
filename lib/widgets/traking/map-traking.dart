@@ -3,6 +3,9 @@ import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:miaguilatraking/controller/location.dart';
 
+import 'StateFloatingButtonIcon.dart';
+
+//WIdget principal encargado de mostrar en tiempo real la ubicación de un dispositivo
 // ignore: must_be_immutable
 class MapTracking extends StatelessWidget {
   final locationCtrl = Get.put(LocationController());
@@ -46,14 +49,14 @@ class MapTracking extends StatelessWidget {
                   alignment: Alignment.bottomRight,
                   child: FloatingActionButton(
                       backgroundColor: Colors.pink,
-                      child: _getCurrentIcon(),
+                      child: StateFloatingButtonIcon(locationCtrl: locationCtrl),
                       onPressed: () {
                         if (!locationCtrl.isActive.isTrue) {
                           locationCtrl.setChangeLocationStream(context);
                           locationCtrl.startActivity();
                         } else {
                           locationCtrl.stopActivity();
-                          _getCurrentIcon();
+                          StateFloatingButtonIcon(locationCtrl: locationCtrl);
                           locationCtrl.positionStreamSubscription.cancel();
                         }
                       }),
@@ -74,8 +77,5 @@ class MapTracking extends StatelessWidget {
         )));
   }
 
-  Icon _getCurrentIcon() {
-    if (locationCtrl.isActive.isTrue) return Icon(Icons.stop);
-    return Icon(Icons.play_arrow);
-  }
 }
+
