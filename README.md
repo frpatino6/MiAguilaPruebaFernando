@@ -1,6 +1,5 @@
-# miaguilatraking
-
-A new Flutter project.
+# MiAguilaPruebaFernando
+Aplicacion movil que muestra la traza de un teléfono dependiendo su posición (Latitud Longitud)
 
 ## Getting Started
 
