@@ -15,6 +15,14 @@ class MapTracking extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+    // ignore: deprecated_member_use
+
+    Map<String, dynamic> persona = {
+      'Nombre': 'Caros',
+      'edad': 30,
+      'soltero': true
+    };
+    print(persona['soltero']);
 
     return Obx(() => Container(
         height: height,
@@ -49,7 +57,8 @@ class MapTracking extends StatelessWidget {
                   alignment: Alignment.bottomRight,
                   child: FloatingActionButton(
                       backgroundColor: Colors.pink,
-                      child: StateFloatingButtonIcon(locationCtrl: locationCtrl),
+                      child:
+                          StateFloatingButtonIcon(locationCtrl: locationCtrl),
                       onPressed: () {
                         if (!locationCtrl.isActive.isTrue) {
                           locationCtrl.setChangeLocationStream(context);
@@ -76,6 +85,4 @@ class MapTracking extends StatelessWidget {
           ),
         )));
   }
-
 }
-
